@@ -3,8 +3,7 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import './Modal.css'
-// import imageAlert from './img/icon-alert.png'
-// import imageWarning from './img/icon-warning.png'
+
 interface ModalProps {
   title?: string;
   mensaje?: string;
@@ -24,8 +23,9 @@ export const WindowModal = ({
   const handleClose = () => {
     setOpen(false);
   };
-  const imageAlert = '../src/components/img/icon-alert.png'
-  const imageWarning = './img/icon-warning.png'
+
+  const imageAlert = '/img/icon-alert.png'
+  const imageWarning = '/img/icon-warning.png'
   const alert ={
     src:imageAlert,
     alt: 'alto'
