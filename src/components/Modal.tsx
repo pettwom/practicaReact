@@ -5,15 +5,15 @@ import Button from '@mui/material/Button';
 import './Modal.css'
 
 interface ModalProps {
-  title?: string;
-  mensaje?: string;
-  tipo?: number;
+  Title?: string;
+  Mensaje?: string;
+  Tipo?: boolean;
 }
 
 export const WindowModal = ({
-  title = "Titulo Ventana Modal",
-  mensaje = "Mensaje Ventana Modal",
-  tipo = 1
+  Title = "Titulo Ventana Modal",
+  Mensaje = "Mensaje Ventana Modal",
+  Tipo = true
 
 }: ModalProps) => {
   const [open, setOpen] = useState(false);
@@ -34,7 +34,7 @@ export const WindowModal = ({
     src:imageWarning,
     alt: 'precaución'
   }
-  const mode = tipo== 1? true:false 
+  
 return (
   <div>
     <Button onClick={handleOpen} className={['btn btn-primary'].join(' ')}>Abrir Ventana Modal</Button>
@@ -48,13 +48,13 @@ return (
     >
       <div className={["modal_container"].join(' ')} >
         <div className={["container-title"].join(' ')}>
-          <span id="modal-title">{title}</span>
+          <span id="modal-title">{Title}</span>
         </div>
         <p id="modal-description">
-          {mensaje}
+          {Mensaje}
         </p>
         
-        <img src={mode?alert.src:warning.src} alt={mode?alert.alt:warning.alt} className={['iconos'].join(' ')}/>
+        <img src={Tipo?alert.src:warning.src} alt={Tipo?alert.alt:warning.alt} className={['iconos'].join(' ')}/>
       </div>
     </Modal>
   </div>

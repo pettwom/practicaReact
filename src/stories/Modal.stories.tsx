@@ -8,7 +8,7 @@ export default {
   component: WindowModal,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    backgroundColor: { control: 'color' },
+
   },
 } as ComponentMeta<typeof WindowModal>;
 
